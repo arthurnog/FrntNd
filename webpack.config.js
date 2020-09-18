@@ -6,13 +6,16 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js'
     },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'public'),
+    },
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader', //terminar de ver a aula de webpack
+                    loader: 'babel-loader',
                 }
             }
         ]
