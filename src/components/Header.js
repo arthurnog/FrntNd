@@ -1,10 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-export default function Header() {
+export default function Header({ title, children }) {
     return(
         <Header>
-            <h1>Aprendendo React</h1>
+            <h1>{title}</h1>
+
+            {children}
         </Header>
     );
 }
